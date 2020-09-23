@@ -18,13 +18,12 @@ class GameContainer extends React.Component {
         return(
             <div className="game-container">
                 Game Container
-                <Card>
+                
                 <MonsterContainer />
                 <PlayerContainer />
                 <ActionBar />
                 <EventBox />
-                <Button variant="dark" block>Dark</Button>{' '}
-                </Card>
+            
             </div>
         )
     }
