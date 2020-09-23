@@ -12,7 +12,6 @@ class Game extends React.Component {
   render() {
     return(
       <div>
-        <h1> WTF am I doing?</h1>
         <GameContainer />
       </div>
     )

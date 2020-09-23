@@ -16,7 +16,7 @@ const App = (props) => {
       <MDBContainer>
       <div className="App">
       
-        <NavBar />
+      <NavBar />
       <Route exact path='/' component={Home} />
       <Route exact path='/game' component={Game} />
       <Route exact path='/high_scores' component={HighScores}/>
