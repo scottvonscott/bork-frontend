@@ -7,12 +7,12 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
 class GameContainer extends React.Component {
-    constructor() {
-        super()
-        this.state ={
-            player: {},
-        }
-    }
+
+    // }    constructor() {
+    //     super()
+    //     this.state ={
+    //         player: {},
+    //     }
 
     render() {
         return(

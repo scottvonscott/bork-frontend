@@ -8,7 +8,7 @@ const EventBox = () =>
 <div><Card>Event Box
     
     <h3>This is where text will go for what's happening.</h3>
-    <Button variant="dark" block>Dark</Button>{' '}
+    <Button variant="dark" block>Continue</Button>{' '}
 
     </Card> </div>
 
