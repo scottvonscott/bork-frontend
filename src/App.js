@@ -12,7 +12,7 @@ import HighScores from './components/HighScores';
 const App = (props) => {
   return (
     <Router>
-      <div>
+      <div className="App">
         <NavBar />
       <Route exact path='/' component={Home} />
       <Route exact path='/game' component={Game} />

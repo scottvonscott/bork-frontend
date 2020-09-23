@@ -12,7 +12,7 @@ class Game extends React.Component {
     return(
       <div>
         <h1> WTF am I doing?</h1>
-        <p>{this.state.something}</p>
+        <GameContainer />
       </div>
     )
   }
