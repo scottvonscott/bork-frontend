@@ -14,7 +14,7 @@ class GameContainer extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="game-container">
                 Game Container
                 <MonsterContainer />
                 <PlayerContainer />
