@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 
 
 const MonsterCard = () =>
-<div><Card border = {"danger"} >MonsterCard
-    <h3>Monster Name</h3></Card>
+<div>MonsterCard
+    <h3>Monster Name</h3>
     </div>
 export default MonsterCard;

@@ -1,5 +1,6 @@
 import React from 'react';
 import GameContainer from "../containers/GameContainer"
+import Button from "react-bootstrap/Button"
 
 class Game extends React.Component {
   constructor() {
@@ -12,6 +13,7 @@ class Game extends React.Component {
   render() {
     return(
       <div>
+        <Button variant="dark" size="lg">Start New Game</Button>{' '}
         <GameContainer />
       </div>
     )

@@ -13,9 +13,9 @@ const Home = () => {
 
       <p>Oh no! Your adorable puppy, Bork, chased a rabbit into a big scary cave. Legends say it’s full of monsters!  You have to save Bork!</p>
       <p>Use your Sword, Shield, or Magic to defeat evil monsters!</p>
-      <ul>Sword will beat Magic</ul>
-      <ul>Sheild will beat Sword</ul>
-      <ul>Magic will beat Shield</ul>
+      <ul>Sword beats Magic</ul>
+      <ul>Sheild beats Sword</ul>
+      <ul>Magic beats Shield</ul>
       <ul>Reduce a monster's health to 0 to move on to the next level</ul>
       <p>Hurry! Bork is counting on you!</p>
     
