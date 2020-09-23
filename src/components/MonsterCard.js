@@ -1,5 +1,7 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
+
 
 const MonsterCard = () =>
-<div>MonsterCard</div>
+<div><Card>MonsterCard</Card></div>
 export default MonsterCard;
