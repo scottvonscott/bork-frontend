@@ -7,6 +7,11 @@ import { render } from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdbreact/dist/css/mdb.css';
+// import { Provider } from 'react-redux';
+// import { createStore } from 'redux'
+// import rootReducer from './reducers/index'
+
+// let store = createStore(rootReducer)
 
 
 ReactDOM.render(

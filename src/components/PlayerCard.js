@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const PlayerCard = () =>
-<div>Player Card!
+<div>Player Card
     <h3>Player Name</h3>
     
     
