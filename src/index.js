@@ -11,12 +11,13 @@ import 'mdbreact/dist/css/mdb.css';
 // import { createStore } from 'redux'
 // import rootReducer from './reducers/index'
 
-// let store = createStore(rootReducer)
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={myStore}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
