@@ -4,6 +4,7 @@ import PlayerContainer from "./PlayerContainer"
 import EventBox from "../components/EventBox"
 import Button from 'react-bootstrap/Button'
 import { connect} from "react-redux"
+import { addHealth, subtractHealth} from "../actions/healthActions"
 
 const GameContainer = (props) => {
 console.log(props) 
@@ -18,4 +19,4 @@ console.log(props)
         )
     }
 
-export default connect(null)(GameContainer);
+export default connect(null, {addHealth, subtractHealth})(GameContainer);

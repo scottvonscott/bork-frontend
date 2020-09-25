@@ -8,11 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import healthReducer from './reducers/healthReducer'
 
 // setting store with Redux's createSTore, and passing in our reducer
-const myStore = createStore(healthReducer)
+const myStore = createStore(healthReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
