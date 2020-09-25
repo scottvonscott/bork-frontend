@@ -1,15 +1,9 @@
 import React from 'react';
 import GameContainer from "../containers/GameContainer"
-import Button from "react-bootstrap/Button"
 import NewGame from "./NewGame"
+// import { connect } from "react-redux"
 
 class Game extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      something: 1
-    }
-  }
 
   render() {
     return(
@@ -19,8 +13,6 @@ class Game extends React.Component {
       </div>
     )
   }
-
-  turn() {}
-  
 }
+
 export default Game;
