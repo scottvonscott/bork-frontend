@@ -1,15 +1,13 @@
 import React from 'react'
 import DungeonContainer from "./DungeonContainer"
 import PlayerContainer from "./PlayerContainer"
-import EventBox from "../components/EventBox"
-import Button from 'react-bootstrap/Button'
 import { connect} from "react-redux"
-import { fetchDungeons } from "../actions/gameActions"
+import { fetchDungeon } from "../actions/gameActions"
 
 class GameContainer extends React.Component {
 
     componentDidMount() {
-        this.props.fetchDungeons()
+        this.props.fetchDungeon(1)
     }
             render(){
                 return(
@@ -17,13 +15,13 @@ class GameContainer extends React.Component {
                 <h3>Game Container</h3>
                 <DungeonContainer dungeons={this.props.dungeons}/>
                 <PlayerContainer player={this.props.player}/>
-                <EventBox />
             
             </div>
         )
                 }
             }
     const mapStateToProps = (state) => {
+        debugger
         const gameState = {
             dungeons: state,
             player: {
@@ -35,4 +33,4 @@ class GameContainer extends React.Component {
     }
 
 
-export default connect(mapStateToProps, { fetchDungeons})(GameContainer);
+export default connect(mapStateToProps, { fetchDungeon})(GameContainer);

@@ -8,7 +8,7 @@ const PlayerContainer = (props) =>{
 console.log(props)
 return(
 <div><Card border ="primary">Player Container
-    <PlayerCard />
+    <PlayerCard player={props}/>
     <ActionBar />
     </Card>
 </div>
