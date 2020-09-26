@@ -3,13 +3,14 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 
-const EventBox = () =>
-
+const EventBox = (props) => {
+    console.log(props)
+return (
 <div><Card>Event Box
     
-    <h3>This is where text will go for what's happening.</h3>
-    <Button variant="dark" block>Continue</Button>{' '}
+    <h3></h3>
 
     </Card> </div>
-
+)
+}
 export default EventBox;
