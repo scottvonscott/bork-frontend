@@ -3,13 +3,13 @@ import MonsterCard from '../components/MonsterCard'
 import Card from 'react-bootstrap/Card'
 
 
-const MonsterContainer = (props) => {
+const DungeonContainer = (props) => {
     console.log(props)
     return(
-<div><Card border = {"danger"}> Monster Container
+<div><Card border = {"danger"}> Dungeon Container
     <MonsterCard />
     </Card>
 </div>
     )
 }
-export default MonsterContainer;
+export default DungeonContainer;

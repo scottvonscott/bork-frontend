@@ -1,8 +1,8 @@
 export default function gameReducer(
-    state = { dungeons: [], loading: false }, action) {
+    state = {dungeons: [], loading: false }, action) {
     switch (action.type) {
       case "GOT_DUNGEONS":
-        return {loading: false, dungeons: action.payload}
+        return {...state, loading: false, dungeons: action.payload}
       case "FETCHING_DUNGEONS":
         return {...state, loading: true}
       default:

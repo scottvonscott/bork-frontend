@@ -1,5 +1,5 @@
 import React from 'react'
-import MonsterContainer from "./MonsterContainer"
+import DungeonContainer from "./DungeonContainer"
 import PlayerContainer from "./PlayerContainer"
 import EventBox from "../components/EventBox"
 import Button from 'react-bootstrap/Button'
@@ -15,8 +15,8 @@ class GameContainer extends React.Component {
                 return(
             <div className="game-container">
                 <h3>Game Container</h3>
-                <MonsterContainer />
-                <PlayerContainer />
+                <DungeonContainer dungeons={this.props.dungeons}/>
+                <PlayerContainer player={this.props.player}/>
                 <EventBox />
             
             </div>
@@ -24,7 +24,14 @@ class GameContainer extends React.Component {
                 }
             }
     const mapStateToProps = (state) => {
-        return state;
+        const gameState = {
+            dungeons: state,
+            player: {
+            player_name: "Scott",
+            player_health: 15,
+            player_attack: 5}
+        }
+        return gameState;
     }
 
 
