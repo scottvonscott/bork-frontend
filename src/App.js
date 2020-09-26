@@ -7,7 +7,7 @@ import {
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Game from './components/Game';
-import HighScores from './components/HighScores';
+import HighScoreContainer from './containers/HighScoreContainer';
 import { MDBContainer } from 'mdbreact'
 
 const App = (props) => {
@@ -19,7 +19,7 @@ const App = (props) => {
       <NavBar />
       <Route exact path='/' component={Home} />
       <Route exact path='/game' component={Game} />
-      <Route exact path='/high_scores' component={HighScores}/>
+      <Route exact path='/high_scores' component={HighScoreContainer}/>
       
       </div>
       </MDBContainer>
