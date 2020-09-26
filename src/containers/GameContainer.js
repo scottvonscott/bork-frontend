@@ -25,6 +25,7 @@ class GameContainer extends React.Component {
                 }
             }
     const mapStateToProps = (state) => {
+        debugger
         return state;
     }
 

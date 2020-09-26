@@ -10,6 +10,7 @@ export const fetchDungeons = () => {
         .then((res) => res.json())
         .then((data) => {
             dispatch(gotDungeons(data))
+            
         })
     }
 }
