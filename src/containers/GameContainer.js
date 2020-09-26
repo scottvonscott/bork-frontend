@@ -1,6 +1,7 @@
 import React from 'react'
 import DungeonContainer from "./DungeonContainer"
 import PlayerContainer from "./PlayerContainer"
+import ActionBar from '../components/ActionBar'
 import { connect} from "react-redux"
 import { fetchDungeon } from "../actions/gameActions"
 
@@ -13,17 +14,16 @@ class GameContainer extends React.Component {
                 return(
             <div className="game-container">
                 <h3>Game Container</h3>
-                <DungeonContainer dungeons={this.props.dungeons}/>
+                <DungeonContainer dungeons={this.props.dungeon}/>
                 <PlayerContainer player={this.props.player}/>
-            
+                <ActionBar />
             </div>
         )
                 }
             }
     const mapStateToProps = (state) => {
-        debugger
         const gameState = {
-            dungeons: state,
+            dungeon: state,
             player: {
             player_name: "Scott",
             player_health: 15,

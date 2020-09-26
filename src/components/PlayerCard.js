@@ -1,10 +1,14 @@
 import React from 'react'
 
 
-const PlayerCard = () =>
-<div>Player Card
-    <h3>Player Name</h3>
+const PlayerCard = (props) => {
+return(
+<div>
+    <h3>{props.player.player.player_name}</h3>
+    <p>Health: {props.player.player.player_health}</p>
+    <p>Attack: {props.player.player.player_attack}</p>
     
     
-    </div>
+    </div>)
+}
 export default PlayerCard;
