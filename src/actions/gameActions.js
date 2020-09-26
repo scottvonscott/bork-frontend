@@ -3,7 +3,7 @@ const gotDungeons = (dungeon) => {
     return {type: "GOT_DUNGEONS", payload: dungeon}
 }
 
-export const fetchDungeonLevels = () => {
+export const fetchDungeons = () => {
     return (dispatch) => {
         dispatch({type: "FETCHING_DUNGEONS"})
         fetch("http://localhost:3000/dungeon_levels")

@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { render } from 'react-dom';
+// import { render } from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'
+// import { composeWithDevTools } from "redux-devtools-extension"
 import thunk from 'redux-thunk'
-import healthReducer from './reducers/healthReducer'
+import gameReducer from './reducers/gameReducer'
 
 // setting store with Redux's createSTore, and passing in our reducer
-const myStore = createStore(healthReducer, applyMiddleware(thunk))
+const myStore = createStore(gameReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
