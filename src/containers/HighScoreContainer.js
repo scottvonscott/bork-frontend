@@ -3,7 +3,8 @@ import HighScoreCard from '../components/HighScoreCard'
 
 class HighScoreContainer extends React.Component {
     state = {
-        highScores: []
+        highScores: [],
+        isLoading: true
     }
 
 
@@ -12,14 +13,20 @@ class HighScoreContainer extends React.Component {
           .then((res) => res.json())
           .then((response) => {
             this.setState({
-              highScores: response
+              highScores: response,
+              isLoading: false
             });
           })
       }
 
       render() {
           return(
-              <HighScoreCard highScores={this.state.highScores}/>
+              <div>
+                  {this.state.isLoading ?
+                  <h1> Loading High Scores...</h1> :
+                  <HighScoreCard highScores={this.state.highScores}/>}
+              
+              </div>
           )
       }
 }

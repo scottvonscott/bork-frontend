@@ -11,7 +11,6 @@ class GameContainer extends React.Component {
     componentDidMount() {
         this.props.fetchDungeons()
     }
-
             render(){
                 return(
             <div className="game-container">

@@ -4,7 +4,8 @@ const HighScoreCard = (props) => {
 console.log(props)
 return(
 <div>
-  {props.highScores.data.map(game => <li>{game.attributes.score}</li>)}
+  <h1>High Scores</h1>
+  {props.highScores.data.map(game => <ul>Player: {game.attributes.player.name} - {game.attributes.score}</ul>)}
     </div>
 )
 }
