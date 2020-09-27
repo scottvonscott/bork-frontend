@@ -11,13 +11,18 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 // import { composeWithDevTools } from "redux-devtools-extension"
 import thunk from 'redux-thunk'
-import gameReducer from './reducers/dungeonReducer'
-import dungeonReducer from './reducers/fightReducer';
-import fightReducer from './reducers/fightReducer'
+
+
+// import dungeonReducer from './reducers/dungeonReducer';
+// import fightReducer from './reducers/fightReducer'
+import reducer from './reducers/index'
 
 // setting store with Redux's createSTore, and passing in our reducer
-const gameReducer = combineReducers({dungeon: dungeonReducer, fight: fightReducer})
-const myStore = createStore(gameReducer, applyMiddleware(thunk))
+// const rootReducer = combineReducers({dungeon: dungeonReducer, fight: fightReducer})
+
+
+// const myStore = createStore(dungeonReducer, applyMiddleware(thunk))
+const myStore = createStore(reducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>

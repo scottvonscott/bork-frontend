@@ -15,17 +15,18 @@ class DungeonContainer extends React.Component {
     }
 
     renderDungeon() {
-        if (this.props.loading) {
+        if (this.props.dungeonReducer.loading) {
             return <h2>Loading Dungeon</h2>
         }
             console.log("renderdungeon")
             let dungeon
-            dungeon = this.props.dungeon
+            dungeon = this.props.dungeonReducer.dungeon
+            
             return (
             <div>
                 <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
                 <p>{dungeon.attributes.entry_text}</p>
-                <MonsterCard monster={this.props.monster} monster_health={this.props.monster_game_health} />
+                <MonsterCard monster={this.props.dungeonReducer.monster} monster_health={this.props.dungeonReducer.monster_game_health} />
             </div>)
     }
 
@@ -42,7 +43,7 @@ class DungeonContainer extends React.Component {
     }
 
     const mapStateToProps = (state) => {
-        console.log('mapstatetoprops')
+        debugger
         return state
 } 
 

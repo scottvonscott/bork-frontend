@@ -7,10 +7,10 @@ import { connect} from "react-redux"
 class PlayerContainer extends React.Component {
 
     renderPlayer() {
-        if (this.props.loading) {
+        if (this.props.dungeonReducer.loading) {
             return <h2>Loading Dungeon</h2>
         } let player 
-        player = this.props.player
+        player = this.props.dungeonReducer.player
         return(
             <div>
                 <PlayerCard player={player} />
