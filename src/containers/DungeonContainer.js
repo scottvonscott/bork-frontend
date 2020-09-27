@@ -24,8 +24,8 @@ class DungeonContainer extends React.Component {
         let dungeon_monsters
         dungeon_monsters = dungeon.attributes.monsters
         return (<div>
-            <h3>{dungeon.attributes.level_number}</h3>
-            <h3>{dungeon.attributes.entry_text}</h3>
+            <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
+            <p>{dungeon.attributes.entry_text}</p>
             <MonsterCard monster={dungeon_monsters} />
         </div>)
     }

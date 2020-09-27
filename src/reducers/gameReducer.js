@@ -1,6 +1,8 @@
 export default function gameReducer(
   // this is probably going to break something, changing default to loading true
-    state = {dungeons: [], loading: true }, action) {
+    state = {dungeons: [], loading: true, player_name: "Scott",
+    player_health: 20, player_attack: 5
+   }, action) {
     switch (action.type) {
       case "GOT_DUNGEONS":
         console.log(action.payload)

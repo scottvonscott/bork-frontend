@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
 
 
 const MonsterCard = (props) => {
@@ -6,10 +7,13 @@ const MonsterCard = (props) => {
     console.log(props)
     return(
 <div>
-    <h3>{props.monster[0].name}</h3>
+    <Card>
+    <h1>Monster Encounter!</h1>
+    <p>{props.monster[0].intro_text}</p>
+    <p>{props.monster[0].name}: "{props.monster[0].quote}"</p>
     <img src={props.monster[0].img_url} />
-    <p>Monster Health: {props.monster[0].health}</p>
-    <p>Monster Attack: {props.monster[0].attack}</p>
+    <p>Health: {props.monster[0].health} | Attack: {props.monster[0].attack}</p>
+    </Card>
     </div>
     )
 }
