@@ -9,9 +9,7 @@ import { fetchDungeon } from "../actions/gameActions"
 class DungeonContainer extends React.Component {
 
     componentDidMount() {
-        console.log("first")
         this.props.fetchDungeon(1);
-        console.log('second')
     }
 
     renderDungeon() {
@@ -21,12 +19,11 @@ class DungeonContainer extends React.Component {
             console.log("renderdungeon")
             let dungeon
             dungeon = this.props.dungeonReducer.dungeon
-            
             return (
             <div>
                 <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
                 <p>{dungeon.attributes.entry_text}</p>
-                <MonsterCard monster={this.props.dungeonReducer.monster} monster_health={this.props.dungeonReducer.monster_game_health} />
+                <MonsterCard monster={this.props.dungeonReducer.monster} monster_health={this.props.fightReducer.monster.monster_game_health} />
             </div>)
     }
 

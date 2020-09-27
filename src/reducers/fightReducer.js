@@ -7,7 +7,8 @@ export default function fightReducer(
           return {...state, player: {...player_stuff, player_health: state.player.player_health - state.monster.monster_attack}, loading: false}
 
         case "REDUCE_MONSTER_HEALTH":
-          let monster_stuff = {player_name: state.player.player_name, player_attack: state.player.player_attack}
+        debugger
+          let monster_stuff = {monster_attack: state.monster.monster_attack}
           return {...state, monster: {...monster_stuff, monster_game_health: state.monster.monster_game_health - state.player.player_attack}, loading: false}
         default:
           return state;

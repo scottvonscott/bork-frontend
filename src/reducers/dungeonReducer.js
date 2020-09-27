@@ -5,8 +5,7 @@ export default function dungeonReducer(
       case "GOT_DUNGEONS":
         console.log(action.payload)
         console.log("fetched")
-        return {...state, loading: false, dungeon: action.payload.data, monster: action.payload.data.attributes.monsters[0], 
-          monster_game_health: action.payload.data.attributes.monsters[0].health
+        return {...state, loading: false, dungeon: action.payload.data, monster: action.payload.data.attributes.monsters[0]
         }
       case "FETCHING_DUNGEONS":
         return {...state, loading: true}
