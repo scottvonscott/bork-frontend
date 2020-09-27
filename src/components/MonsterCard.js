@@ -9,10 +9,10 @@ const MonsterCard = (props) => {
 <div>
     <Card>
     <h1>MONSTER!</h1>
-    <p>{props.monster[0].intro_text}</p>
-    <p>{props.monster[0].name}: "{props.monster[0].quote}"</p>
-    <img src={props.monster[0].img_url} />
-    <p>Monster Health: {props.monster[0].health} | Monster Attack: {props.monster[0].attack}</p>
+    <p>{props.monster.intro_text}</p>
+    <p>{props.monster.name}: "{props.monster.quote}"</p>
+    <img src={props.monster.img_url} />
+    <p>Monster Health: {props.monster_health} | Monster Attack: {props.monster.attack}</p>
     </Card>
     </div>
     )

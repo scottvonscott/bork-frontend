@@ -20,13 +20,11 @@ class DungeonContainer extends React.Component {
         }
         console.log("renderdungeon")
         let dungeon
-        dungeon = this.props.dungeons.data
-        let dungeon_monsters
-        dungeon_monsters = dungeon.attributes.monsters
+        dungeon = this.props.dungeon
         return (<div>
             <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
             <p>{dungeon.attributes.entry_text}</p>
-            <MonsterCard monster={dungeon_monsters} />
+            <MonsterCard monster={this.props.monster} monster_health={this.props.monster_game_health} />
         </div>)
     }
 
