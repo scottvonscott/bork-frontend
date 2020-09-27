@@ -12,9 +12,12 @@ const Home = () => {
 
       
       <p>Oh no! Your adorable puppy, Bork, chased a rabbit into a big scary cave. Legends say it’s full of monsters!  You have to save Bork!</p>
+      <img src={'https://myfirstshiba.com/wp-content/uploads/2017/11/AdobeStock_149297117.jpg'} />
+      {/* <img src={'https://i.imgur.com/pPK0RNo.jpg'} /> */}
+   
       <p>Use your Sword, Shield, or Magic to defeat evil monsters!</p>
       <ul>Sword beats Magic</ul>
-      <ul>Sheild beats Sword</ul>
+      <ul>Shield beats Sword</ul>
       <ul>Magic beats Shield</ul>
       <ul>Reduce a monster's health to 0 to move on to the next level</ul>
       <p>Hurry! Bork is counting on you!</p>
