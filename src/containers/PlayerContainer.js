@@ -2,18 +2,38 @@ import React from 'react'
 import PlayerCard from '../components/PlayerCard'
 import ActionBar from '../components/ActionBar'
 import Card from 'react-bootstrap/Card'
+import { connect} from "react-redux"
 
+class PlayerContainer extends React.Component {
 
-const PlayerContainer = (props) =>{
+    renderPlayer() {
+        if (this.props.loading) {
+            return <h2>Loading Dungeon</h2>
+        } let player 
+        player = this.props.player
+        return(
+            <div>
+                <PlayerCard player={player} />
+            </div>
+        )
+    }
 
-return(
-<div><Card border ="primary">
-    <PlayerCard player={props}/>
-    <ActionBar />
+    render() {
+        return(
+        <div><Card border ="primary">
+            {this.renderPlayer()}
+            <ActionBar />
+            
+            </Card>
+        </div>
+        )
+        }
     
-    </Card>
-</div>
-)
 }
 
-export default PlayerContainer;
+const mapStateToProps = (state) => {
+    console.log('mapstatetoprops')
+    return state
+} 
+
+export default connect(mapStateToProps)(PlayerContainer);

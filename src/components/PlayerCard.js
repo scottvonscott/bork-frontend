@@ -1,13 +1,14 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
 
-
-const PlayerCard = (props) => {
-    console.log(props)
+const PlayerCard = (props) => {    
 return(
 <div>
-    {/* <h3>{props.player.player.player_name}</h3>
-    <p>Health: {props.player.player.player_health}</p>
-    <p>Attack: {props.player.player.player_attack}</p> */}
+    <Card>
+        <h1>{props.player.player_name}</h1>
+        <p>Your Health: {props.player.player_health} | Your Attack: {props.player.player_attack}</p>
+    </Card>
+
     
     
     </div>)
