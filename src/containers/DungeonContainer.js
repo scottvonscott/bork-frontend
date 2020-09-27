@@ -18,14 +18,15 @@ class DungeonContainer extends React.Component {
         if (this.props.loading) {
             return <h2>Loading Dungeon</h2>
         }
-        console.log("renderdungeon")
-        let dungeon
-        dungeon = this.props.dungeon
-        return (<div>
-            <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
-            <p>{dungeon.attributes.entry_text}</p>
-            <MonsterCard monster={this.props.monster} monster_health={this.props.monster_game_health} />
-        </div>)
+            console.log("renderdungeon")
+            let dungeon
+            dungeon = this.props.dungeon
+            return (
+            <div>
+                <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
+                <p>{dungeon.attributes.entry_text}</p>
+                <MonsterCard monster={this.props.monster} monster_health={this.props.monster_game_health} />
+            </div>)
     }
 
 
