@@ -10,7 +10,8 @@ class PlayerContainer extends React.Component {
         if (this.props.dungeonReducer.loading) {
             return <h2>Loading Dungeon</h2>
         } let player 
-        player = this.props.dungeonReducer.player
+        debugger
+        player = this.props.fightReducer.player
         return(
             <div>
                 <PlayerCard player={player} />

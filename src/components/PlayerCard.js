@@ -2,6 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 
 const PlayerCard = (props) => {    
+    debugger
 return(
 <div>
     <Card>
