@@ -8,12 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 // import { composeWithDevTools } from "redux-devtools-extension"
 import thunk from 'redux-thunk'
-import gameReducer from './reducers/gameReducer'
+import gameReducer from './reducers/dungeonReducer'
+import dungeonReducer from './reducers/fightReducer';
+import fightReducer from './reducers/fightReducer'
 
 // setting store with Redux's createSTore, and passing in our reducer
+const gameReducer = combineReducers({dungeon: dungeonReducer, fight: fightReducer})
 const myStore = createStore(gameReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
