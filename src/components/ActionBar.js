@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 import { playerDmg, monsterDmg } from "../actions/attackActions"
 
 const ActionBar = (props) => {
-    debugger
 return(
 <div> ActionBar
     <button onClick={props.playerDmg} id="player-dmg">Attack</button>
