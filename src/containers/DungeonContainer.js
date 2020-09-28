@@ -24,6 +24,7 @@ class DungeonContainer extends React.Component {
                 <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
                 <p>{dungeon.attributes.entry_text}</p>
                 <MonsterCard monster={this.props.dungeonReducer.monster} monster_health={this.props.fightReducer.monster.monster_game_health} />
+                <EventBox action_outcome={this.props.fightReducer.action_outcome} />
             </div>)
     }
 

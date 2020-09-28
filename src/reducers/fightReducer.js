@@ -1,13 +1,13 @@
 export default function fightReducer(
-      state = {loading: true, player: {player_name: "Scott", player_health: 20, player_attack: 5}, monster: {monster_game_health: 10, monster_attack: 5}}, action) {
+      state = {loading: true, action_outcome: {log: "Awaiting Action"}, player: {player_name: "Scott", player_health: 20, player_attack: 5}, monster: {monster_game_health: 10, monster_attack: 5}}, action) {
       switch (action.type) {
         case "REDUCE_PLAYER_HEALTH":
           let player_stuff = {player_name: state.player.player_name, player_attack: state.player.player_attack}
-          return {...state, player: {...player_stuff, player_health: state.player.player_health - state.monster.monster_attack}, loading: false}
+          return {...state, action_outcome: {log: "Player takes damage!"}, player: {...player_stuff, player_health: state.player.player_health - state.monster.monster_attack}, loading: false}
 
         case "REDUCE_MONSTER_HEALTH":
           let monster_stuff = {monster_attack: state.monster.monster_attack}
-          return {...state, monster: {...monster_stuff, monster_game_health: state.monster.monster_game_health - state.player.player_attack}, loading: false}
+          return {...state, action_outcome: {log: "Monster takes damage!"}, monster: {...monster_stuff, monster_game_health: state.monster.monster_game_health - state.player.player_attack}, loading: false}
         default:
           return state;
       }

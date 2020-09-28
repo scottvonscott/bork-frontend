@@ -5,9 +5,9 @@ import Button from 'react-bootstrap/Button'
 
 const EventBox = (props) => {
 return (
-<div><Card>Event Box
+<div><Card>Battle Results
     
-    <h3>{props.outcome}</h3>
+    <h3>{props.action_outcome.log}</h3>
 
     </Card> </div>
 )

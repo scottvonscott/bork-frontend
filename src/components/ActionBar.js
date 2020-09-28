@@ -89,16 +89,16 @@ const ActionBar = (props) => {
         }
     }
 
-    const renderOutcome = (outcome) => {
-        console.log(outcome)
-        if (outcome != ""){
-        return (<EventBox outcome={outcome}/>)
-        }
-    }
+    // const renderOutcome = (outcome) => {
+    //     console.log(outcome)
+    //     if (outcome != ""){
+    //     return (<EventBox outcome={outcome}/>)
+    //     }
+    // }
 
         return(
         <div>
-            {renderOutcome(outcome)}
+            {/* {renderOutcome(outcome)} */}
             
              ActionBar
         <Button variant="dark" size="lg" onClick={() => roshambo("1", props)}>Sword</Button>
