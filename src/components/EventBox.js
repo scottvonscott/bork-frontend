@@ -4,11 +4,10 @@ import Button from 'react-bootstrap/Button'
 
 
 const EventBox = (props) => {
-    console.log(props)
 return (
 <div><Card>Event Box
     
-    <h3></h3>
+    <h3>{props.outcome}</h3>
 
     </Card> </div>
 )

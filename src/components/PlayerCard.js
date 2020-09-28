@@ -6,7 +6,7 @@ return(
 <div>
     <Card>
         <h1>{props.player.player_name}</h1>
-        <p>Your Health: {props.player.player_health} | Your Attack: {props.player.player_attack}</p>
+        <h3>Your Health: {props.player.player_health} | Your Attack: {props.player.player_attack}</h3>
     </Card>
 
     
