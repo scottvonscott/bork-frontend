@@ -1,6 +1,5 @@
 import React from 'react'
 import PlayerCard from '../components/PlayerCard'
-import ActionBar from '../components/ActionBar'
 import Card from 'react-bootstrap/Card'
 import { connect} from "react-redux"
 
@@ -24,9 +23,7 @@ class PlayerContainer extends React.Component {
     render() {
         return(
         <div><Card border ="primary">
-            {this.renderPlayer()}
-            <ActionBar />
-            
+            {this.renderPlayer()}    
             </Card>
         </div>
         )
