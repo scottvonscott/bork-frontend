@@ -21,14 +21,13 @@ class DungeonContainer extends React.Component {
         dungeon = this.props.dungeonReducer.dungeon
         
         // Conditional rendering here for dungeon exit text, monster death, button to fetch new dungeon IF monster_health === 0
-            if (this.props.fightReducer.monster.monster_game_health === 0) {
+            if (this.props.fightReducer.monster_stats.monster_health <= 0) {
                 const nextDungeon = dungeon.attributes.level_number + 1
-                debugger
                 return(
                     <div>
                         <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
                         <p>{dungeon.attributes.exit_text}</p>
-                        {/* <Button variant="dark" size="lg" onClick={() => roshambo("1", props)}>Sword</Button> */}
+                        <Button variant="dark" size="lg" onClick={() => this.props.fetchDungeon(nextDungeon)}>Next Dungeon Level!</Button>
 
 
                     </div>
@@ -38,7 +37,7 @@ class DungeonContainer extends React.Component {
                     <div>
                         <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
                         <p>{dungeon.attributes.entry_text}</p>
-                        <MonsterCard monster={this.props.dungeonReducer.monster} monster_health={this.props.fightReducer.monster.monster_game_health} />
+                        <MonsterCard monster={this.props.dungeonReducer.monster} monster_health={this.props.fightReducer.monster_stats.monster_health} />
                         <EventBox action_outcome={this.props.fightReducer.action_outcome} />
                     </div>)
     }

@@ -3,6 +3,10 @@ const gotDungeons = (dungeon) => {
     return {type: "GOT_DUNGEONS", payload: dungeon}
 }
 
+const newMonster = (dungeon) => {
+    return {type: "NEW_MONSTER", payload: dungeon}
+}
+
 export const fetchDungeons = () => {
     return (dispatch) => {
         dispatch({type: "FETCHING_DUNGEONS"})
@@ -23,6 +27,7 @@ export const fetchDungeon = (level) => {
         .then((res) => res.json())
         .then((data) => {
             dispatch(gotDungeons(data))
+            dispatch(newMonster(data))
             
         })
     }

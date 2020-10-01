@@ -3,8 +3,6 @@ export default function dungeonReducer(
     state = {dungeons: {}, monster: {}, loading: true,}, action) {
     switch (action.type) {
       case "GOT_DUNGEONS":
-        console.log(action.payload)
-        console.log("fetched")
         return {...state, loading: false, dungeon: action.payload.data, monster: action.payload.data.attributes.monsters[0]
         }
       case "FETCHING_DUNGEONS":
