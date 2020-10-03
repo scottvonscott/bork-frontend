@@ -10,9 +10,6 @@ class PlayerContainer extends React.Component {
             return <h2>Loading Dungeon</h2>
         } let player 
         player = this.props.fightReducer.player
-        console.log("PlayerContainer")
-        console.log(player.player_health)
-
         return(
             <div>
                 <PlayerCard player={player} />
@@ -22,17 +19,16 @@ class PlayerContainer extends React.Component {
 
     render() {
         return(
-        <div><Card border ="primary">
-            {this.renderPlayer()}    
-            </Card>
-        </div>
-        )
+            <div><Card border ="primary">
+                {this.renderPlayer()}    
+                </Card>
+            </div>
+            )
         }
     
 }
 
 const mapStateToProps = (state) => {
-    console.log('mapstatetoprops')
     return state
 } 
 

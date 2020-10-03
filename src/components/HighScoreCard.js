@@ -1,7 +1,6 @@
 import React from 'react';
 
 const HighScoreCard = (props) => {
-console.log(props)
 return(
 <div>
   <h1>High Scores</h1>

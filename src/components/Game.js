@@ -3,9 +3,7 @@ import GameContainer from "../containers/GameContainer"
 import NewGame from "./NewGame"
 // import { connect } from "react-redux"
 
-class Game extends React.Component {
-
-  render() {
+const Game = () => {
     return(
       <div>
         {/* <NewGame /> */}
@@ -13,6 +11,5 @@ class Game extends React.Component {
       </div>
     )
   }
-}
 
 export default Game;

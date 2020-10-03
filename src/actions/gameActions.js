@@ -19,7 +19,6 @@ export const fetchDungeons = () => {
     }
 }
 
-
 export const fetchDungeon = (level) => {
     return (dispatch) => {
         dispatch({type: "FETCHING_DUNGEON"})
