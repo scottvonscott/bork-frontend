@@ -1,6 +1,4 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card'
-
 
 const MonsterCard = (props) => {
     return(
