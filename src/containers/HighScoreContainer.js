@@ -18,7 +18,7 @@ class HighScoreContainer extends React.Component {
             });
           })
       }
-
+      
       render() {
           return(
               <div>

@@ -10,7 +10,7 @@ import Card from 'react-bootstrap/Card'
 class DungeonContainer extends React.Component {
 
     componentDidMount() {
-        this.props.fetchDungeon(1);
+        this.props.fetchDungeon(3);
     }
 
     renderDungeon() {
@@ -27,6 +27,7 @@ class DungeonContainer extends React.Component {
         
         // Conditional rendering here for dungeon exit text, monster death, button to fetch new dungeon IF monster_health === 0
             if (this.props.fightReducer.monster_stats.monster_health <= 0) {
+
                 if (dungeon.attributes.monsters[0].final_boss){
                     return(
                         <EndGame score={score}/>

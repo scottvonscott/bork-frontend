@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ScoreForm from './ScoreForm'
 
 const EndGame = (score) => {
     debugger
@@ -8,6 +8,8 @@ const EndGame = (score) => {
           <h1>
               You saved Bork! 
               Your score is: {score.score}
+              <ScoreForm score={score} />
+              
           </h1>
     
       </div>

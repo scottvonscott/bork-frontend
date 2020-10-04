@@ -32,4 +32,21 @@ export const fetchDungeon = (level) => {
     }
 }
 
-
+export const addScore = (score, player_name) => {
+    debugger
+    let newGameObj = {
+        score,
+        player_name
+    }
+    let configObj = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify(newGameObj)
+    }
+    fetch('http://localhost:3000/games', configObj)
+    .then(res => res.json())
+    .then(console.log("New Score Created"))
+}
