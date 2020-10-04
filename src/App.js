@@ -10,7 +10,7 @@ import Game from './components/Game';
 import HighScoreContainer from './containers/HighScoreContainer';
 import { MDBContainer } from 'mdbreact'
 
-const App = (props) => {
+const App = () => {
   return (
     <Router>
       <MDBContainer>

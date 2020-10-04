@@ -10,13 +10,13 @@ const GameOver = () => {
 
     return(
       <div>
-          <h1> 
+          <h3> 
               You got knocked out by the monster and dragged back to the cave entrace...
-          </h1>
-
-          <h1>
+          </h3>
+      <br></br>
+          <h3>
               Get back up and save Bork!
-          </h1>
+          </h3>
           <Button variant="dark" size="lg" onClick={refreshPage}>Try again!</Button>
     
       </div>

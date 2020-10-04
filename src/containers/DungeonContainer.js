@@ -2,7 +2,6 @@ import React from 'react'
 import MonsterCard from '../components/MonsterCard'
 import EventBox from '../components/EventBox'
 import EndGame from '../components/EndGame'
-import GameOver from '../components/GameOver'
 import { connect} from "react-redux"
 import { fetchDungeon } from "../actions/gameActions"
 import Button from 'react-bootstrap/Button'
@@ -28,7 +27,6 @@ class DungeonContainer extends React.Component {
         
         // Conditional rendering here for dungeon exit text, monster death, button to fetch new dungeon IF monster_health === 0
             if (this.props.fightReducer.monster_stats.monster_health <= 0) {
-                // debugger
                 if (dungeon.attributes.monsters[0].final_boss){
                     return(
                         <EndGame score={score}/>
@@ -52,15 +50,6 @@ class DungeonContainer extends React.Component {
     }
 
     render(){
-        if (this.props.fightReducer.player.player_health <= 0) {
-            return (
-                <div><Card border = {"danger"}> 
-                    <GameOver />
-                </Card>
-            </div>
-
-            )}
-
             return(
                 <div><Card border = {"danger"}> 
                 {this.renderDungeon()}

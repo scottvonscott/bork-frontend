@@ -98,9 +98,6 @@ const ActionBar = (props) => {
 
         return(
         <div>
-            {/* {renderOutcome(outcome)} */}
-            
-             ActionBar
         <Button variant="dark" size="lg" onClick={() => roshambo("1", props)}>Sword</Button>
         <Button variant="dark" size="lg" onClick={() => roshambo("2", props)}>Shield</Button>
         <Button variant="dark" size="lg" onClick={() => roshambo("3", props)}>Spell</Button>

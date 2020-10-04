@@ -8,17 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, combineReducers } from 'redux'
+import { createStore, applyMiddleware} from 'redux'
 // import { composeWithDevTools } from "redux-devtools-extension"
 import thunk from 'redux-thunk'
 import reducer from './reducers/index'
 
-// setting store with Redux's createSTore, and passing in our reducer
 const myStore = createStore(reducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
-   {/* Wrapping App in provider allows entire app to access store. passing in store as an opject */}
     <Provider store={myStore}>
       <App />
     </Provider>

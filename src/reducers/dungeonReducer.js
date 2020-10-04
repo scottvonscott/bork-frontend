@@ -1,5 +1,4 @@
 export default function dungeonReducer(
-  // this is probably going to break something, changing default to loading true
     state = {dungeons: {}, monster: {}, loading: true,}, action) {
     switch (action.type) {
       case "GOT_DUNGEONS":
