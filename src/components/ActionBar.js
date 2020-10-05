@@ -14,36 +14,36 @@ const ActionBar = (props) => {
         let m_action = getRndInteger(1, m_actions.length)
         
         if (player_a === 1 && m_action === 1) {
-            {props.outcome(1)}
+            props.outcome(1)
         }
         else if (player_a === 2 && m_action === 2){
-            {props.outcome(2)}
+            props.outcome(2)
         }
         else if (player_a === 3 && m_action === 3){
-            {props.outcome(3)}
+            props.outcome(3)
         }
         else if (player_a === 1 && m_action === 2){
-            {props.playerDmg()}
-            {props.outcome(4)}
+            props.playerDmg()
+            props.outcome(4)
         }
         else if (player_a === 1 && m_action === 3){
-            {props.monsterDmg()}
-            {props.outcome(5)}
+            props.monsterDmg()
+            props.outcome(5)
         }
         else if (player_a === 2 && m_action === 1){
-            {props.monsterDmg()}
-            {props.outcome(6)}
+            props.monsterDmg()
+            props.outcome(6)
         }
         else if (player_a === 2 && m_action === 3){
-            {props.playerDmg()}
-            {props.outcome(7)}
+            props.playerDmg()
+            props.outcome(7)
         }
         else if (player_a === 3 && m_action === 1){
-            {props.playerDmg()}
-            {props.outcome(8)}
+            props.playerDmg()
+            props.outcome(8)
         } else if (player_a === 3 && m_action === 2) {
-            {props.monsterDmg()}
-            {props.outcome(9)}
+            props.monsterDmg()
+            props.outcome(9)
         }
     }
 

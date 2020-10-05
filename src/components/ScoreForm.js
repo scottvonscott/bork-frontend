@@ -18,7 +18,7 @@ class ScoreForm extends React.Component {
     event.preventDefault()
     let score = this.props.score.score
     let player = this.state.value
-    {addScore(score, player)}
+    addScore(score, player)
     return (
       <HighScoreContainer />
     )

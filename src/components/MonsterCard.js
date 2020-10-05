@@ -11,6 +11,7 @@ const MonsterCard = (props) => {
             </Card>
                 <img src={props.monster.img_url} />
             <Card>
+                <h3>{props.monster.name}</h3>
                 <h3>Monster Health: {props.monster_health} | Monster Attack: {props.monster.attack}</h3>
             </Card>
         </div>
