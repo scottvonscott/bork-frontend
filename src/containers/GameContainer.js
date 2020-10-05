@@ -13,10 +13,11 @@ class GameContainer extends React.Component {
 
         if (this.props.fightReducer.player.player_health <= 0) {
             return (
-                <div><Card border = {"danger"}> 
-                    <GameOver />
-                </Card>
-            </div>
+                <div>
+                    <Card border = {"danger"}> 
+                        <GameOver />
+                    </Card>
+                </div>
 
             )}
         return(

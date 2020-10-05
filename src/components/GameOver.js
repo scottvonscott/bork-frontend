@@ -13,7 +13,7 @@ const GameOver = () => {
           <h3> 
               You got knocked out by the monster and dragged back to the cave entrace...
           </h3>
-      <br></br>
+          <br></br>
           <h3>
               Get back up and save Bork!
           </h3>

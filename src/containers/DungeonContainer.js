@@ -27,7 +27,6 @@ class DungeonContainer extends React.Component {
         
         // Conditional rendering here for dungeon exit text, monster death, button to fetch new dungeon IF monster_health === 0
             if (this.props.fightReducer.monster_stats.monster_health <= 0) {
-                debugger
 
                 if (dungeon.attributes.monsters[0].final_boss){
                     return(

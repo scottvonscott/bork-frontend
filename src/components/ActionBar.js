@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import { playerDmg, monsterDmg, outcome } from "../actions/attackActions"
 
 const ActionBar = (props) => {
+
      const roshambo = (p_action, props) => {
 
         let player_a = parseInt(p_action)
@@ -11,6 +12,7 @@ const ActionBar = (props) => {
         let getRndInteger = (min, max) => {
             return Math.floor(Math.random() * (max - min + 1)) + min
         }
+        
         let m_action = getRndInteger(1, m_actions.length)
         
         if (player_a === 1 && m_action === 1) {
