@@ -13,7 +13,7 @@ import { MDBContainer } from 'mdbreact'
 const App = () => {
   return (
     <Router>
-      <MDBContainer>
+      <MDBContainer >
       <div className="App">
       
       <NavBar />

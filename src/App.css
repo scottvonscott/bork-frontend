@@ -1,8 +1,9 @@
 .App {
-  text-align: center;}
+  text-align: center;
+color: white}
 
 .container div {
-  background-color: #eee
+  background-color: rgb(44, 43, 43)
 }
 
 #wrapper div {

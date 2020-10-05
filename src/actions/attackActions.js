@@ -2,7 +2,6 @@ export const playerDmg = () => ({type: "REDUCE_PLAYER_HEALTH"})
 export const monsterDmg = () => ({type: "REDUCE_MONSTER_HEALTH"})
 
 export const outcome = (id) => {
-    debugger
     switch(id) {
         case 1:
         return {type: "TWO ATTACK"}

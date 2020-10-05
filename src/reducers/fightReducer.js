@@ -1,5 +1,5 @@
 export default function fightReducer(
-      state = {loading: true, action_outcome: {log: "Awaiting New Action"}, player: {player_name: "Scott", player_health: 100, player_attack: 15}, monster_stats: {monster_health: 20, monster_attack: 10}}, action) {
+      state = {loading: true, action_outcome: {log: "Awaiting New Action"}, player: {player_name: "Player", player_health: 100, player_attack: 15}, monster_stats: {monster_health: 20, monster_attack: 10}}, action) {
       switch (action.type) {
         case "REDUCE_PLAYER_HEALTH":
           let player_stuff = {player_name: state.player.player_name, player_attack: state.player.player_attack}
@@ -19,17 +19,17 @@ export default function fightReducer(
           case "TWO SPELL":
             return {...state, action_outcome: {log:"You both cast spells, no one takes damage"}}
           case "ATK DEF":
-            return {...state, action_outcome: {log:"You attack, and it defends. You take damage!"}}
+            return {...state, action_outcome: {log:"You attack, but the monster defends and counterattacks! You take damage!"}}
           case "ATK SPELL":
-              return {...state, action_outcome: {log:"You attack, and it casts a spell. Monster takes damage!"}}
+              return {...state, action_outcome: {log:"Monster tries casting a spell, but you attack before it can finish! Monster takes damage!"}}
           case "DEF ATK":
-            return {...state, action_outcome: {log:"You defend and it attacks. Monster takes damage!"}}
+            return {...state, action_outcome: {log:"Monster attacks, but you defend and counterattack! Monster takes damage!"}}
           case "DEF SPELL":
-            return {...state, action_outcome: {log:"You defend and it casts a spell. You take damage!"}}
+            return {...state, action_outcome: {log:"You try to defend, but it casts a spell on you! You take damage!"}}
           case "SPELL ATK":
-            return {...state, action_outcome: {log:"You cast a spell and it attacks. You take damage!"}}
+            return {...state, action_outcome: {log:"You cast a spell, but the monster attacks before you can finish! You take damage!"}}
           case "SPELL DEF":
-            return {...state, action_outcome: {log:"You cast a spell and it defends. Monster takes damage!"}}
+            return {...state, action_outcome: {log:"Monster tries to defend, but you cast a spell on it! Monster takes damage!"}}
         default:
           return state;
       }

@@ -13,7 +13,6 @@ const Home = () => {
       
       <p>Oh no! Your adorable puppy, Bork, chased a rabbit into a big scary cave. Legends say it’s full of monsters!  You have to save Bork!</p>
       <img src={'https://myfirstshiba.com/wp-content/uploads/2017/11/AdobeStock_149297117.jpg'} />
-      {/* <img src={'http://www.simpleimageresizer.com/_uploads/photos/4da03d78/ratman_1_500x448.jpg'} /> */}
       
    
       <p>Use your Sword, Shield, or Magic to defeat evil monsters!</p>
