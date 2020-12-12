@@ -10,10 +10,7 @@ import Card from 'react-bootstrap/Card'
 class DungeonContainer extends React.Component {
 
     componentDidMount() {
-        console.log("A")
         this.props.fetchDungeon(1);
-        console.log("B")
-        // aysnc fetch order : ACBD
     }
 
     renderDungeon() {
@@ -40,6 +37,10 @@ class DungeonContainer extends React.Component {
                         <h1>Dungeon Level {dungeon.attributes.level_number}</h1>
                         <p>{this.props.dungeonReducer.monster.death_text}</p>
                         <br></br>
+                        <p>You've found some loot!</p>
+                        <Button variant="light" size="lg">LOOT</Button>
+
+
                         <p>{dungeon.attributes.exit_text}</p>
                         <Button variant="dark" size="lg" onClick={() => this.props.fetchDungeon(nextDungeon)}>Next Dungeon Level!</Button>
                     </div>
