@@ -38,7 +38,7 @@ class DungeonContainer extends React.Component {
                         <p>{this.props.dungeonReducer.monster.death_text}</p>
                         <br></br>
                         <p>You've found some loot!</p>
-                        <Button variant="light" size="lg">LOOT</Button>
+                        <LootOption loot={} />
 
 
                         <p>{dungeon.attributes.exit_text}</p>
