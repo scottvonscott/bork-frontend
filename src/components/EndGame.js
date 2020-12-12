@@ -9,7 +9,7 @@ const EndGame = (score) => {
               <img src={'https://myfirstshiba.com/wp-content/uploads/2017/11/AdobeStock_149297117.jpg'} />
               <h3>Bork: "Awoof!"</h3>
               <br></br>
-              <p>Your prize is the friendship of your bestest budddy. Oh, but here's your score too.</p>
+              <p>Your prize is the friendship of your bestest buddy. Oh, but here's your score too.</p>
               <br></br>
               <p>Your Score: {score.score}</p>
               <ScoreForm score={score} />
