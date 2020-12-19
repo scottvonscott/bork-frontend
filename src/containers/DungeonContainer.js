@@ -20,8 +20,12 @@ class DungeonContainer extends React.Component {
         let dungeon
         let nextDungeon
         let score
+        let lootItems
+        debugger
         dungeon = this.props.dungeonReducer.dungeon
+        lootItems = this.props.dungeonReducer.loot
         nextDungeon = dungeon.attributes.level_number + 1
+        debugger
         score = this.props.fightReducer.player.player_attack * this.props.fightReducer.player.player_health * 10
         
         
@@ -38,7 +42,7 @@ class DungeonContainer extends React.Component {
                         <p>{this.props.dungeonReducer.monster.death_text}</p>
                         <br></br>
                         <p>You've found some loot!</p>
-                        <LootOption loot={} />
+                        {/* <LootOption loot={} /> */}
 
 
                         <p>{dungeon.attributes.exit_text}</p>

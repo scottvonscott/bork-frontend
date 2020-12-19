@@ -20,7 +20,6 @@ export const fetchDungeons = () => {
 }
 
 export const fetchDungeon = (level) => {
-    console.log("C")
     return (dispatch) => {
         dispatch({type: "FETCHING_DUNGEON"})
         fetch(`http://localhost:3000/dungeon_levels/${level}`)
