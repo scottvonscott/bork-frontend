@@ -22,11 +22,9 @@ class DungeonContainer extends React.Component {
         let nextDungeon
         let score
         let lootItems
-        debugger
         dungeon = this.props.dungeonReducer.dungeon
         lootItems = this.props.dungeonReducer.loot
         nextDungeon = dungeon.attributes.level_number + 1
-        debugger
         score = this.props.fightReducer.player.player_attack * this.props.fightReducer.player.player_health * 10
         
         
