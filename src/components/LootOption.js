@@ -7,8 +7,8 @@ const LootOption = (props) => {
 
     return(
         <div>
-            <Button variant="danger" size="lg" onClick={() => roshambo("1", props)}>Sword</Button>
-            <Button variant="danger" size="lg" onClick={() => roshambo("1", props)}>Sword</Button>
+            <Button variant="danger" size="lg" >Sword</Button>
+            <Button variant="danger" size="lg" >Sword</Button>
 
         </div>
     )

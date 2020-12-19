@@ -2,6 +2,7 @@ import React from 'react'
 import MonsterCard from '../components/MonsterCard'
 import EventBox from '../components/EventBox'
 import EndGame from '../components/EndGame'
+import LootOption from '../components/LootOption'
 import { connect} from "react-redux"
 import { fetchDungeon } from "../actions/gameActions"
 import Button from 'react-bootstrap/Button'
@@ -42,7 +43,9 @@ class DungeonContainer extends React.Component {
                         <p>{this.props.dungeonReducer.monster.death_text}</p>
                         <br></br>
                         <p>You've found some loot!</p>
-                        {/* <LootOption loot={} /> */}
+                        <br></br>
+                        <p>Choose your prize... </p>
+                        <LootOption loot={lootItems} />
 
 
                         <p>{dungeon.attributes.exit_text}</p>
