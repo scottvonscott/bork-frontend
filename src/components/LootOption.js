@@ -7,20 +7,32 @@ import {armor, weapon} from "../actions/lootActions"
 const LootOption = (props) => {
     debugger
     const [isShown, showArmorDescription] = useState(false)
+    const [isSeen, showWeaponDescription] = useState(false)
     let armorOption = props.loot[1]
     let weaponOption = props.loot[0]
     debugger
 
     return(
         <div>
+            <h3>
             <Button variant="danger" size="lg" onMouseEnter={() => showArmorDescription(true)} onMouseLeave={() => showArmorDescription(false)} >{armorOption.name}</Button>
-            <Button variant="danger" size="lg" >{weaponOption.name}</Button>
 
             {isShown && (
                 <div>
                     {armorOption.description}
-                    </div>
+                </div>
             )}
+            </h3>
+
+            <h3>
+            <Button variant="danger" size="lg" onMouseEnter={() => showWeaponDescription(true)} onMouseLeave={() => showWeaponDescription(false)} >{weaponOption.name}</Button>
+
+            {isSeen && (
+                <div>
+                    {weaponOption.description}
+                </div>
+)}
+            </h3>
 
         </div>
     )
