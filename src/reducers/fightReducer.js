@@ -5,6 +5,14 @@ export default function fightReducer(
           let player_stuff = {player_name: state.player.player_name, player_attack: state.player.player_attack}
           return {...state, player: {...player_stuff, player_health: state.player.player_health - state.monster_stats.monster_attack}, loading: false}
 
+        case "INCREASE_PLAYER_HEALTH":
+          let player_stuff = {player_name: state.player.player_name, player_attack: state.player.player_attack}
+          return {...state, player: {...player_stuff, player_health: state.player.player_health + }, loading: false}
+
+        case "INCREASE_PLAYER_ATTACK":
+          let player_stats = {player_name: state.player.player_name, player_attack: state.player.player_attack}
+          return {...state, player: {...player_stats, player_health: state.player.player_health + }, loading: false}
+
         case "REDUCE_MONSTER_HEALTH":
           let monster_stuff = {monster_attack: state.monster_stats.monster_attack}
           return {...state, monster_stats: {...monster_stuff, monster_health: state.monster_stats.monster_health - state.player.player_attack}, loading: false}
