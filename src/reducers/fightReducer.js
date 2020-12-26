@@ -1,17 +1,16 @@
 export default function fightReducer(
-      state = {loading: true, action_outcome: {log: "Awaiting New Action"}, player: {player_name: "Player", player_health: 100, player_attack: 9}, monster_stats: {monster_health: 20, monster_attack: 10}}, action) {
+      state = {loading: true, action_outcome: {log: "Awaiting New Action"}, player: {player_health: 100, player_attack: 9}, monster_stats: {monster_health: 20, monster_attack: 10}}, action) {
       switch (action.type) {
+        let player_attack = {player_attack: state.player.player_attack}
         case "REDUCE_PLAYER_HEALTH":
-          let player_stuff = {player_name: state.player.player_name, player_attack: state.player.player_attack}
-          return {...state, player: {...player_stuff, player_health: state.player.player_health - state.monster_stats.monster_attack}, loading: false}
+          
+          return {...state, player: {...player_attack, player_health: state.player.player_health - state.monster_stats.monster_attack}, loading: false}
 
         case "INCREASE_PLAYER_HEALTH":
-          let player_stuff = {player_name: state.player.player_name, player_attack: state.player.player_attack}
-          return {...state, player: {...player_stuff, player_health: state.player.player_health + }, loading: false}
+          return {...state, player: {...player_attack, player_health: state.player.player_health + }, loading: false}
 
-        case "INCREASE_PLAYER_ATTACK":
-          let player_stats = {player_name: state.player.player_name, player_attack: state.player.player_attack}
-          return {...state, player: {...player_stats, player_health: state.player.player_health + }, loading: false}
+        // case "INCREASE_PLAYER_ATTACK":
+        //   return {...state, player: {...player_attack, player_health: state.player.player_health }, loading: false}
 
         case "REDUCE_MONSTER_HEALTH":
           let monster_stuff = {monster_attack: state.monster_stats.monster_attack}
