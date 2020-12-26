@@ -5,12 +5,12 @@ import { connect } from "react-redux"
 import {armor, weapon} from "../actions/lootActions"
 
 const LootOption = (props) => {
-    debugger
+    
     const [isShown, showArmorDescription] = useState(false)
     const [isSeen, showWeaponDescription] = useState(false)
     let armorOption = props.loot[1]
     let weaponOption = props.loot[0]
-    debugger
+    
 
     return(
         <div>
